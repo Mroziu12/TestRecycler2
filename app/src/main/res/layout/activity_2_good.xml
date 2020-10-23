@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_2Good"
+    android:background="@color/myAppDarkBg">
+
+    <RelativeLayout
+        android:id="@+id/listWifiContainer"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:paddingBottom="20dp"
+        android:background="@drawable/list_bt_background">
+
+        <TextView
+            android:id="@+id/tvWybranaSiec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="20dp"
+            android:text="Wybrana siec:"
+            android:textSize="20dp"
+            android:background="@drawable/text_bg"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewWifi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvWybranaSiec"/>
+
+    </RelativeLayout>
+
+
+
+    <EditText
+        android:id="@+id/etWifiPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listWifiContainer"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="20dp"
+        android:hint="Haslo do Wifi"
+        android:padding="10dp"
+        android:textColor="@color/myAppDarkBg"
+        android:background="@drawable/custom_input"/>
+
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/btnSendWifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:text="Przeslij Dane "
+        android:layout_below="@+id/etWifiPass"
+        android:background="@drawable/ripple_effect_button"/>
+
+
+</RelativeLayout>
